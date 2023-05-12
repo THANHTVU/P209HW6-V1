@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Food Ordering System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+    <div data-role="header">
+        <h1>Food Ordering System</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>Welcome to the Food Ordering System. Please click the button below to place your order.</p>
+        <a href="#order-page" class="ui-btn ui-btn-inline ui-corner-all">Place Order</a>
+    </div>
+    <div data-role="footer">
+        <h4>Food Ordering System &copy; 2023</h4>
+    </div>
+</div>
+
+<!-- Order Page -->
+<div data-role="page" id="order-page">
+    <div data-role="header">
+        <h1>Place Your Order</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <label for="food">Food:</label>
+            <input type="text" name="food" id="food">
+            <button type="button" id="submit-button">Submit Order</button>
+        </form>
+    </div>
+    <div data-role="footer">
+        <h4>Food Ordering System &copy; 2023</h4>
+    </div>
+</div>
+
+<!-- Display Page -->
+<div data-role="page" id="display-page">
+    <div data-role="header">
+        <h1>Order Details</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <ul data-role="listview" id="order-list"></ul>
+    </div>
+    <div data-role="footer">
+        <h4>Food Ordering System &copy; 2023</h4>
+    </div>
+</div>
+
+<!-- Confirmation Page -->
+<div data-role="page" id="confirmation-page">
+    <div data-role="header">
+        <h1>Order Confirmed</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>Thank you for your order, <span id="conf-name"></span>! Your order for <span id="conf-food"></span> has been received.</p>
+    </div>
+    <div data-role="footer">
+        <h4>Food Ordering System &copy; 2023</h4>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
